@@ -1,5 +1,5 @@
 # Boomerang-Purse
-Weather data rest API, plus weather data charts
+Weather data REST API, plus weather data charts.
 
 **API** to enter a city and period defined by startdate and enddate. Dates should be in the format yyyy-mm-dd.
 Year (yyyy) must be the same for both dates and not less than 2008 (uses www.worldweatheronline.com historical API)
