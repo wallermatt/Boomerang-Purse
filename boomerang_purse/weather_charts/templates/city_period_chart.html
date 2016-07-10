@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <title>City Period Chart</title>
+     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <div id="temp_chart" style="width:50%;height:25%;"></div>
+    <div id="humidity_chart" style="width:50%;height:25%;"></div>
+</body>
+
+<script>
+    var value_keys_list = '{{ value_keys }}'.split(',');
+    var temperature_title = '{{ title_string }}' + 'Temperature C';
+    var humidity_title = '{{ title_string }}' + 'Humidity';
+	TEMP_CHART = document.getElementById('temp_chart');
+	Plotly.plot( TEMP_CHART, [{
+	x: value_keys_list,
+    y: {{ temp_values }},
+    type: 'bar',
+    marker: {color: 'rgb(255,140,0)'}
+	}], {title: temperature_title });
+
+	HUMIDITY_CHART = document.getElementById('humidity_chart');
+	Plotly.plot( HUMIDITY_CHART, [{
+	x: value_keys_list,
+    y: {{ humidity_values }},
+    type: 'bar',
+    marker: {color: 'rgb(102,205,170)'}
+	}], {title: humidity_title});
+
+</script>
+
+
+</html>

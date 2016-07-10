@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'boomerang_purse.weather_api',
+    'boomerang_purse.weather_charts',
 ]
 
 MIDDLEWARE_CLASSES = [
