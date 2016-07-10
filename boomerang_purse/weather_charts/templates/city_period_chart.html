@@ -16,6 +16,7 @@
     var value_keys_list = '{{ value_keys }}'.split(',');
     var temperature_title = '{{ title_string }}' + 'Temperature C';
     var humidity_title = '{{ title_string }}' + 'Humidity';
+
 	TEMP_CHART = document.getElementById('temp_chart');
 	Plotly.plot( TEMP_CHART, [{
 	x: value_keys_list,
